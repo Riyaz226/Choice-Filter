@@ -1,0 +1,57 @@
+const [data, setData] = useState(Data);
+
+const[sort,sorting]=useState();
+
+   <div className='select_filter'>
+             <select value={sort} onChange={sorting}>
+              <option value="all">All</option>
+              <option value="low">Low</option>
+              <option value="high">High</option>
+        </select>
+    </div>
+    <div class="container2">
+ <div class="products">
+{
+data.map((item) => (
+    <div class="product">
+      
+        <div class="image">
+            <img src={item.imgdata} alt="{item.images}"/>
+          </div>
+        <div class="namePrice">
+            <h3>{item.rname}</h3>
+            <span>{item.price}&euro;</span>
+        </div>
+        <p>{item.rating}</p>
+        <div class="bay">
+            <button > bay now </button>
+        </div>
+
+    </div> 
+))}
+    </div>   
+ </div>
+
+ // import React from 'react';
+// import { Provider } from 'react-redux';
+// import { createStore } from 'redux';
+// import rootReducer from './redux/reducer/main';
+// //import {Data} from './Filter/Data'
+// import Products from '../src/Filter/Products'
+// //import Filter from '../src/Filter/Filter'
+
+// const store = createStore(rootReducer);
+
+// function App() {
+ 
+//   return (
+//     <Provider store={store}>
+//       <div className="App">
+//       <Products/>
+//       <br/>
+//       </div>
+//     </Provider>
+//   );
+// }
+
+// export default App;
